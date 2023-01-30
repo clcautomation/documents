@@ -1,0 +1,9 @@
+h2,
+body {
+    font-family: 'PT Sans Narrow', sans-serif !important;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: 1px
+}
