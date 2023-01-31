@@ -7,3 +7,22 @@ h2 {
     font-weight: 700;
     letter-spacing: 1px
 }
+
+#foto {
+    height: 350px;
+    aspect-ratio: 4/3;
+    width: 77.5%;
+}
+
+.contenedor-logo {
+    width: auto;
+    height: auto;
+    background-color: #F0F0F5;
+
+    background: rgba(240, 240, 245, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.6px);
+    -webkit-backdrop-filter: blur(12.6px);
+    border: 1px solid rgba(240, 240, 245, 0.3);
+}
