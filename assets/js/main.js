@@ -6,7 +6,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get("id");
 console.log(id)
 
-function cargarContenido() {
+function cargarContenido(num) {
 
     // Obteniendo las id de los elementos
 
@@ -28,9 +28,16 @@ function cargarContenido() {
 
                 nombre_id.innerHTML = objeto.name
                 mail_id.innerHTML = objeto.mail
-                mail_id.href = "mailto:" + objeto.mail
-                btn_mail.href = "mailto:" + objeto.mail
-                btn_tel.href = "tel:" + objeto.tel
+
+                if (num != 2) {
+                    mail_id.href = "mailto:" + objeto.mail
+                    btn_mail.href = "mailto:" + objeto.mail
+                    btn_tel.href = "tel:" + objeto.tel
+                } else {
+                    btn_mail.innerHTML = objeto.mail
+                    btn_tel.innerHTML = objeto.tel
+                }
+
                 foto_id.src = objeto.foto
 
 
@@ -43,9 +50,16 @@ function cargarContenido() {
 
         nombre_id.innerHTML = objeto.name
         mail_id.innerHTML = objeto.mail
-        mail_id.href = "mailto:" + objeto.mail
-        btn_mail.href = "mailto:" + objeto.mail
-        btn_tel.href = "tel:" + objeto.tel
+
+        if (num != 2) {
+            mail_id.href = "mailto:" + objeto.mail
+            btn_mail.href = "mailto:" + objeto.mail
+            btn_tel.href = "tel:" + objeto.tel
+        } else {
+            btn_mail.innerHTML = objeto.mail
+            btn_tel.innerHTML = objeto.tel
+        }
+
         foto_id.src = objeto.foto
     }
 
