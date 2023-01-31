@@ -1,4 +1,4 @@
-let perfiles = [{ id: "fernando", name: "FERNANDO MAYOL", mail: "ventas@camozziweb.com.ar", foto: "../assets/img/fer.jpeg" }, { id: "nazareno", name: "NAZARENO ÁLVAREZ", mail: "nalvarez@camozziweb.com.ar", foto: "../assets/img/naza.jpeg" }, { id: "josefina", name: "JOSEFINA MAYOL", mail: "administracion@camozziweb.com.ar", foto: "../assets/img/jose.jpeg" }]
+let perfiles = [{ id: "fernando", name: "FERNANDO MAYOL", mail: "ventas@camozziweb.com.ar", foto: "../assets/img/fer.jpeg", tel: "+54 9 11 5613-6073" }, { id: "nazareno", name: "NAZARENO ÁLVAREZ", mail: "nalvarez@camozziweb.com.ar", foto: "../assets/img/naza.jpeg", tel: "+54 9 11 5180-8128" }, { id: "josefina", name: "JOSEFINA MAYOL", mail: "administracion@camozziweb.com.ar", foto: "../assets/img/jose.jpeg", tel: "+54 9 11 2138-7275" }]
 
 // Obteniendo el perfil referenciado en la URL
 
@@ -13,6 +13,8 @@ function cargarContenido() {
     let foto_id = document.getElementById("foto")
     let nombre_id = document.getElementById("nombre")
     let mail_id = document.getElementById("mail")
+    let btn_mail = document.getElementById("btn-mail")
+    let btn_tel = document.getElementById("btn-tel")
 
     // Estableciendo valores
 
@@ -27,6 +29,8 @@ function cargarContenido() {
                 nombre_id.innerHTML = objeto.name
                 mail_id.innerHTML = objeto.mail
                 mail_id.href = "mailto:" + objeto.mail
+                btn_mail.href = "mailto:" + objeto.mail
+                btn_tel.href = "tel:" + objeto.tel
                 foto_id.src = objeto.foto
 
 
@@ -40,6 +44,8 @@ function cargarContenido() {
         nombre_id.innerHTML = objeto.name
         mail_id.innerHTML = objeto.mail
         mail_id.href = "mailto:" + objeto.mail
+        btn_mail.href = "mailto:" + objeto.mail
+        btn_tel.href = "tel:" + objeto.tel
         foto_id.src = objeto.foto
     }
 
