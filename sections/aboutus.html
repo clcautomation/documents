@@ -45,6 +45,24 @@
             color: rgb(185, 185, 185) !important;
             transition: all 0.15s linear;
         }
+
+        .sr-only {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+            clip: rect(1px 1px 1px 1px);
+            /* maybe deprecated but we need to support legacy browsers */
+            clip: rect(1px, 1px, 1px, 1px);
+            /* modern browsers, clip-path works inwards from each corner */
+            clip-path: inset(50%);
+            /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+            white-space: nowrap;
+        }
     </style>
 </head>
 
@@ -101,22 +119,23 @@
                 class="btn btn-outline-secondary rounded-circle d-flex justify-content-center align-items-center"
                 style="width: 42px; height: 42px; display: flex !important; justify-content: center !important; align-items: center !important; font-size: 16px;"
                 data-bs-toggle="tooltip" data-bs-title="Dirección: Quito 3886 - CABA"><i
-                    class="fa-solid fa-location-dot"></i></a>
+                    class="fa-solid fa-location-dot"></i><span class="sr-only">Dirección: Quito 3886 - CABA</span></a>
             <a href="tel:+5491156136073" target="_blank" id="btn-tel" type="button"
                 class="btn btn-outline-secondary rounded-circle d-flex justify-content-center align-items-center"
                 style="width: 42px; height: 42px; display: flex !important; justify-content: center !important; align-items: center !important; font-size: 16px;"
                 data-bs-toggle="tooltip" data-bs-title="Llamar: +54 9 11 5613-6073"><i
-                    class="fa-solid fa-phone"></i></a>
+                    class="fa-solid fa-phone"></i><span class="sr-only">Llamar: +54 9 11 5613-6073</span></a>
             <a href="mailto:ventas@camozziweb.com.ar" target="_blank" id="btn-mail" type="button"
                 class="btn btn-outline-secondary rounded-circle d-flex justify-content-center align-items-center"
                 style="width: 42px; height: 42px; display: flex !important; justify-content: center !important; align-items: center !important; font-size: 16px;"
                 data-bs-toggle="tooltip" data-bs-title="Enviar E-mail: ventas@camozziweb.com.ar"><i
-                    class="fa-solid fa-envelope"></i></a>
+                    class="fa-solid fa-envelope"></i><span class="sr-only">Enviar E-mail:
+                    ventas@camozziweb.com.ar</span></a>
             <a href="https://www.clcautomation.com.ar" target="_blank" type="button"
                 class="btn btn-outline-secondary rounded-circle d-flex justify-content-center align-items-center"
                 style="width: 42px; height: 42px; display: flex !important; justify-content: center !important; align-items: center !important; font-size: 16px;"
                 data-bs-toggle="tooltip" data-bs-title="Sitio web: www.clcautomation.com.ar"><i
-                    class="fa-solid fa-globe"></i></a>
+                    class="fa-solid fa-globe"></i><span class="sr-only">Sitio web de CLC Automation</span></a>
         </div>
 
         <a href="https://www.clcautomation.com.ar/contacto/" target="_blank"
